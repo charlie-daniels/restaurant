@@ -1,6 +1,12 @@
 import style from './../styles/global.css';
 import loadHome from './home.js';
 
+function loadPage(page) {
+  const container = document.getElementById('content');
+  const footer = document.querySelector('footer');
+  container.insertBefore(page, footer);
+}
+
 function createHeader() {
   const header = document.createElement('header');
   const heading = document.createElement('h1');
@@ -12,11 +18,6 @@ function createHeader() {
 }
 
 function createNav() {
-  const loadPage = (page) => {
-    const container = document.getElementById('content');
-    const footer = document.querySelector('footer');
-    container.insertBefore(page, footer);
-  }
 
   const nav = document.createElement('nav');
   nav.classList.add('background');
@@ -60,4 +61,5 @@ export default function initialiseWebsite() {
   );
   
   document.querySelector('body').appendChild(content);
+  loadPage(loadHome());
 }
