@@ -1,14 +1,15 @@
 import chefJpeg from './../images/chef.jpeg';
+import style from './../styles/home.css';
 
 function createIntroduction() {
   const intro = document.createElement('section');
   intro.setAttribute('id', 'introduction');
 
   const para1 = document.createElement('p');
-  para1.classList.add('text');
+  para1.classList.add('background');
   para1.textContent = 'This is the experience of your lifetime. Taste the hours of labour spent crafting perfection, and have our chefs walk you through the flavour sensation that is our cuisine.';
   const para2 = document.createElement('p');
-  para2.classList.add('text');
+  para2.classList.add('background');
   para2.textContent = 'Whether it be fellow strangers at the Chef\'s table, or as a group of loved ones, embark on a guided tour through the delectable, untamed and ferocious aromas of our locally sourced ingredients.';
 
   intro.append(para1, para2);
@@ -20,13 +21,13 @@ function createPreview() {
   preview.setAttribute('id', 'preview');
 
   const chef = document.createElement('div');
-  chef.classList.add('chef');
+  chef.classList.add('chef', 'background');
   preview.appendChild(chef);
 
   const chefImg = new Image();
   chefImg.src = chefJpeg;
   const quoteWrapper = document.createElement('div');
-  quoteWrapper.classList.add('quote');
+  quoteWrapper.classList.add('quote', 'background');
   chef.append(chefImg, quoteWrapper);
 
   const quote = document.createElement('q');

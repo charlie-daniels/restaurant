@@ -1,0 +1,34 @@
+#introduction {
+  display: grid;
+}
+
+#introduction p:nth-of-type(n) {
+  grid-column: 1 / span 2;
+}
+
+#introduction p:nth-of-type(2n) {
+  grid-column: 2 / span 2;
+}
+
+.chef {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chef img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 1px solid white;
+}
+
+.chef .quote {
+  margin-top: 2rem;
+  margin-bottom: 0;
+  width: 60%;
+}
+
+.quote p{
+  text-align: right;
+}

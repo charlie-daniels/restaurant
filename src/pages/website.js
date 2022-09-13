@@ -1,9 +1,10 @@
-import style from './../styles/style.css';
+import style from './../styles/global.css';
 import loadHome from './home.js';
 
 function createHeader() {
   const header = document.createElement('header');
   const heading = document.createElement('h1');
+  heading.classList.add('background');
   heading.textContent = 'Gudadryck';
   header.appendChild(heading);
 
@@ -18,6 +19,7 @@ function createNav() {
   }
 
   const nav = document.createElement('nav');
+  nav.classList.add('background');
 
   const home = document.createElement('button');
   home.textContent = 'Home';
@@ -31,9 +33,9 @@ function createNav() {
   return nav;
 }
 
-
 function createFooter() {
   const footer = document.createElement('footer');
+  footer.classList.add('background');
   footer.textContent = 'built by ';
   const gitLink = document.createElement('a');
   gitLink.setAttribute('href', 'https://github.com/charlie-daniels');
