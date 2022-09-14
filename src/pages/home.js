@@ -21,7 +21,7 @@ function createIntroduction() {
 
 function createPreview() {
   const preview = document.createElement('section');
-  preview.setAttribute('id', 'preview');
+  preview.classList.add('content-center');
 
   const chef = document.createElement('div');
   chef.classList.add('chef', 'background', 'content-center');
