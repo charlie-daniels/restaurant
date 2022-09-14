@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=Petit+Formal+Script');
+$title-font-stack: 'Petit Formal Script', serif;
+
+h1 {
+  font-family: $title-font-stack;
+  font-size: 4rem;
+  letter-spacing: normal;
+}
+
+nav {
+  display: flex;
+  width: 90%;
+  justify-content: space-around;
+  font-size: 2rem;
+  padding: .5rem;
+  & button {
+    appearance: none;
+    border: none;
+    background: none;
+    color: inherit;
+    font-family: inherit;
+    font-size: 1.5rem;
+    position: relative;
+  }
+  & button:hover::after {
+    content: ' ';
+    width: 4rem;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    top: 2rem;
+  }
+}
+
+footer {
+  margin-top: auto !important;
+  text-align: center;
+}

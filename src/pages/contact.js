@@ -1,5 +1,5 @@
-import './../styles/contact.css';
-import addressPng from './../images/address.png';
+import '../styles/contact.scss';
+import addressPng from '../images/address.png';
 
 function createLocation() {
   const location = document.createElement('div');
