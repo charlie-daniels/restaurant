@@ -3,10 +3,11 @@ import addressPng from './../images/address.png';
 
 function createLocation() {
   const location = document.createElement('div');
+  location.classList.add('content-center');
 
   const findUs = document.createElement('h2');
   findUs.textContent = 'Find us';
-  findUs.classList.add('background', 'content-center');
+  findUs.classList.add('background');
   const addressWrapper = document.createElement('div');
   addressWrapper.classList.add('background', 'content-center');
 
@@ -25,13 +26,14 @@ function createLocation() {
 
 function createTel() {
   const tel = document.createElement('div');
+  tel.classList.add('content-center');
 
   const talk = document.createElement('h2');
   talk.textContent = 'Talk with us';
-  talk.classList.add('background', 'content-center');
+  talk.classList.add('background');
   const phone = document.createElement('p');
   phone.textContent = '+1-202-555-0125';
-  phone.classList.add('background', 'content-center');
+  phone.classList.add('background');
 
   tel.append(
     talk,

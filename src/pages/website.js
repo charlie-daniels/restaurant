@@ -1,6 +1,7 @@
 import './../styles/global.css';
 import loadHome from './home.js';
 import loadContact from './contact.js';
+import loadMenu from './menu.js';
 
 function loadPage(page) {
   const container = document.getElementById('current-page');
@@ -27,6 +28,7 @@ function createNav() {
   home.addEventListener('click', () => loadPage(loadHome()));
   const menu = document.createElement('button');
   menu.textContent = 'Menu';
+  menu.addEventListener('click', () => loadPage(loadMenu()));
   const contact = document.createElement('button');
   contact.textContent = 'Contact';
   contact.addEventListener('click', () => loadPage(loadContact()));
@@ -42,6 +44,7 @@ function createNav() {
 function createPageContainer() {
   const container = document.createElement('div');
   container.setAttribute('id', 'current-page');
+  container.classList.add('stretch');
   return container;
 }
 
@@ -75,5 +78,5 @@ export default function initialiseWebsite() {
   );
   
   document.querySelector('body').appendChild(content);
-  loadPage(loadHome());
+  loadPage(loadMenu());
 }

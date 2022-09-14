@@ -84,6 +84,11 @@ nav > button {
   align-items: center;
 }
 
+.stretch {
+  width: 90%;
+}
+
 #content {
   min-height: 100vh;
 }
+
