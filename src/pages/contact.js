@@ -23,23 +23,33 @@ function createLocation() {
   return location;
 }
 
+function createTel() {
+  const tel = document.createElement('div');
+
+  const talk = document.createElement('h2');
+  talk.textContent = 'Talk with us';
+  talk.classList.add('background', 'content-center');
+  const phone = document.createElement('p');
+  phone.textContent = '+1-202-555-0125';
+  phone.classList.add('background', 'content-center');
+
+  tel.append(
+    talk,
+    phone
+  );
+  return tel
+}
+
 export default function loadContact() {
   const contact = document.createElement('div');
   contact.setAttribute('id', 'contact');
 
   const address = createLocation();
-
-  const talk = document.createElement('h2');
-  talk.textContent = 'Talk with us';
-  talk.classList.add('background', 'content-center');
-  const call = document.createElement('p');
-  call.textContent = '+1-202-555-0125';
-  call.classList.add('background', 'content-center');
+  const tel = createTel();
 
   contact.append(
     address,
-    talk,
-    call
+    tel
   );
   return contact;
 }
