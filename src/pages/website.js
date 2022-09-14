@@ -1,4 +1,6 @@
 import './../styles/global.css';
+import './../styles/website.css';
+
 import loadHome from './home.js';
 import loadContact from './contact.js';
 import loadMenu from './menu.js';
@@ -13,7 +15,7 @@ function createHeader() {
   const header = document.createElement('header');
   const heading = document.createElement('h1');
   heading.classList.add('background');
-  heading.textContent = 'Gudadryck';
+  heading.textContent = 'Rêver';
 
   header.append(heading);
   return header;
@@ -78,5 +80,5 @@ export default function initialiseWebsite() {
   );
   
   document.querySelector('body').appendChild(content);
-  loadPage(loadMenu());
+  loadPage(loadHome());
 }
