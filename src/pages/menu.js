@@ -1,4 +1,4 @@
-import './../styles/menu.css';
+import '../styles/menu.scss';
 
 function createMenuItem(name, desc) {
   const item = document.createElement('div');

@@ -1,5 +1,5 @@
-import chefJpeg from './../images/chef.jpeg';
-import './../styles/home.css';
+import '../styles/home.scss';
+import chefJpeg from '../images/chef.jpeg';
 
 function createIntroduction() {
   const intro = document.createElement('section');

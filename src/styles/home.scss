@@ -1,0 +1,27 @@
+.chef {
+  & img {
+  max-width: 300px;
+  max-height: 300px;
+  border-radius: 50%;
+  }
+  & .quote {
+    margin-top: 2rem;
+    margin-bottom: 0;
+    width: 60%;
+    & p {
+      text-align: right;
+    }    
+  }
+}
+
+#introduction {
+  display: grid;
+  & p:nth-of-type(n) {
+    grid-column: 1 / span 2;
+  }
+  
+  & p:nth-of-type(2n) {
+    grid-column: 2 / span 2;
+  }
+}
+

@@ -1,5 +1,5 @@
-import './../styles/global.css';
-import './../styles/website.css';
+import '../styles/global.scss';
+import '../styles/website.scss';
 
 import loadHome from './home.js';
 import loadContact from './contact.js';
@@ -15,7 +15,7 @@ function createHeader() {
   const header = document.createElement('header');
   const heading = document.createElement('h1');
   heading.classList.add('background');
-  heading.textContent = 'Rêver';
+  heading.textContent = 'rêves de nourriture';
 
   header.append(heading);
   return header;

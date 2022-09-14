@@ -1,6 +1,7 @@
 /* Fonts */
 
 @import url('https://fonts.googleapis.com/css?family=Raleway');
+$main-font-stack: 'Raleway', serif;
 
 /* Resets */
 
@@ -35,26 +36,25 @@ img {
 
 /*  */
 
-:root {
-  --bg-color: #272626;
-  --text-bg-color: #0000006a;
-  --text-color: #f6f6f6;
-}
+$bg-color: #272626;
+$text-bg-color: #0000006a;
+$text-color: #f6f6f6;
 
 body {
   background-image: url('./../images/background.jpeg');
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
-  color: var(--text-color);
-  font-family: 'Raleway';
+  color: $text-color;
+  font-family: $main-font-stack;
+  letter-spacing: 0.3px;
 }
 
 .background {
-  background-color: var(--text-bg-color);
+  background-color: $text-bg-color;
   margin: 1rem;
   padding: 0.4rem;
-  box-shadow: 0 0 10px 10px var(--text-bg-color);
+  box-shadow: 0 0 10px 10px $text-bg-color;
 }
 
 .content-center {
