@@ -1,5 +1,5 @@
 import chefJpeg from './../images/chef.jpeg';
-import style from './../styles/home.css';
+import './../styles/home.css';
 
 function createIntroduction() {
   const intro = document.createElement('section');
@@ -12,7 +12,10 @@ function createIntroduction() {
   para2.classList.add('background');
   para2.textContent = 'Whether it be fellow strangers at the Chef\'s table, or as a group of loved ones, embark on a guided tour through the delectable, untamed and ferocious aromas of our locally sourced ingredients.';
 
-  intro.append(para1, para2);
+  intro.append(
+    para1, 
+    para2
+  );
   return intro;
 }
 
@@ -21,20 +24,26 @@ function createPreview() {
   preview.setAttribute('id', 'preview');
 
   const chef = document.createElement('div');
-  chef.classList.add('chef', 'background');
+  chef.classList.add('chef', 'background', 'content-center');
   preview.appendChild(chef);
 
   const chefImg = new Image();
   chefImg.src = chefJpeg;
   const quoteWrapper = document.createElement('div');
   quoteWrapper.classList.add('quote', 'background');
-  chef.append(chefImg, quoteWrapper);
+  chef.append(
+    chefImg,
+    quoteWrapper
+  );
 
   const quote = document.createElement('q');
   quote.textContent = 'My food has been my lifelong dream, and now I can make it other people\'s reality.';
   const quoteRef = document.createElement('p');
   quoteRef.textContent = '- Head Chef Pellesi';
-  quoteWrapper.append(quote, quoteRef);
+  quoteWrapper.append(
+    quote, 
+    quoteRef
+  );
 
   return preview;
 }
@@ -45,6 +54,9 @@ export default function loadHome() {
   const intro = createIntroduction();
   const preview = createPreview();
 
-  home.append(intro, preview);
+  home.append(
+    intro, 
+    preview
+  );
   return home;
 }

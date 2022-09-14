@@ -78,9 +78,12 @@ nav > button {
   padding: 0.8rem;
 }
 
-#content {
+.content-center {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+#content {
   min-height: 100vh;
 }

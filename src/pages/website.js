@@ -1,10 +1,11 @@
-import style from './../styles/global.css';
+import './../styles/global.css';
 import loadHome from './home.js';
+import loadContact from './contact.js';
 
 function loadPage(page) {
-  const container = document.getElementById('content');
-  const footer = document.querySelector('footer');
-  container.insertBefore(page, footer);
+  const container = document.getElementById('current-page');
+  container.innerHTML = '';
+  container.appendChild(page);
 }
 
 function createHeader() {
@@ -12,13 +13,12 @@ function createHeader() {
   const heading = document.createElement('h1');
   heading.classList.add('background');
   heading.textContent = 'Gudadryck';
-  header.appendChild(heading);
 
+  header.append(heading);
   return header;
 }
 
 function createNav() {
-
   const nav = document.createElement('nav');
   nav.classList.add('background');
 
@@ -29,9 +29,20 @@ function createNav() {
   menu.textContent = 'Menu';
   const contact = document.createElement('button');
   contact.textContent = 'Contact';
+  contact.addEventListener('click', () => loadPage(loadContact()));
 
-  nav.append(home, menu, contact);
+  nav.append(
+    home, 
+    menu, 
+    contact
+  );
   return nav;
+}
+
+function createPageContainer() {
+  const container = document.createElement('div');
+  container.setAttribute('id', 'current-page');
+  return container;
 }
 
 function createFooter() {
@@ -42,21 +53,24 @@ function createFooter() {
   gitLink.setAttribute('href', 'https://github.com/charlie-daniels');
   gitLink.textContent = 'charlie-daniels';
 
-  footer.appendChild(gitLink);
+  footer.append(gitLink);
   return footer;
 }
 
 export default function initialiseWebsite() {
   const content = document.createElement('div');
   content.setAttribute('id', 'content');
+  content.classList.add('content-center');
 
   const header = createHeader();
   const nav = createNav();
+  const pageContainer = createPageContainer();
   const footer = createFooter();
 
   content.append(
     header,
     nav,
+    pageContainer,
     footer
   );
   
